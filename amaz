@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grab Cool Gadgets</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header, footer {
+      width: 100%;
+      max-width: 450px;
+      background: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social-icons a {
+      margin-left: 10px;
+      color: #444;
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #000;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .search-box {
+      position: sticky;
+      top: 0;
+      background: #f9f9f9;
+      padding-bottom: 10px;
+      z-index: 10;
+    }
+
+    #search {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .product-card .info {
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-card .info span {
+      flex: 1;
+      font-weight: bold;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .copy-btn:hover {
+      color: #000;
+    }
+
+    .spinner {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .spinner div {
+      width: 12px;
+      height: 12px;
+      background: #888;
+      border-radius: 50%;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    .spinner div:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .spinner div:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes bounce {
+      to {
+        transform: translateY(-8px);
+        opacity: 0.3;
+      }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      flex-direction: column;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 480px) {
+      .product-card .info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Grab Cool Gadgets</h2>
+    <div class="social-icons">
+      <a href="https://instagram.com/GrabCoolGadgets" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/grablootoffers" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com/@grabcoolgadgets" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://t.me/GrabLootOffers" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search gadgets..."/>
+    </div>
+
+    <div class="spinner" id="spinner">
+      <div></div><div></div><div></div>
+    </div>
+
+    <div class="product-list" id="product-list"></div>
+  </div>
+
+  <footer>
+    <p>Associated with Amazon</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/GrabCoolGadgets" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/grablootoffers" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com/@grabcoolgadgets" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://t.me/GrabLootOffers" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const productList = document.getElementById('product-list');
+    const searchInput = document.getElementById('search');
+    const spinner = document.getElementById('spinner');
+    let products = [];
+
+    // Replace with your actual Google Docs `.txt` JSON link
+    const jsonURL = "https://docs.google.com/document/d/e/2PACX-1v.../pub?embedded=true"; // Replace with actual .txt or .json link
+
+    async function fetchProducts() {
+      try {
+        const res = await fetch(jsonURL);
+        const text = await res.text();
+        const cleanText = text.replace(/(\r\n|\n|\r)/gm, '');
+        const data = JSON.parse(cleanText);
+        products = data;
+        displayProducts(products);
+      } catch (err) {
+        productList.innerHTML = "<p>Error loading products. Please try again later.</p>";
+        console.error("Fetch error:", err);
+      } finally {
+        spinner.style.display = 'none';
+      }
+    }
+
+    function displayProducts(list) {
+      productList.innerHTML = "";
+      list.forEach(product => {
+        const card = document.createElement('a');
+        card.href = product.link;
+        card.target = "_blank";
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" loading="lazy">
+          <div class="info">
+            <span>${product.name}</span>
+            <button class="copy-btn" onclick="event.preventDefault(); copyToClipboard('${product.link}')">
+              <i class="fas fa-link"></i>
+            </button>
+          </div>
+        `;
+        productList.appendChild(card);
+      });
+    }
+
+    function copyToClipboard(link) {
+      navigator.clipboard.writeText(link).then(() => {
+        alert("Link copied to clipboard!");
+      });
+    }
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+      const filtered = products.filter(p =>
+        p.name.toLowerCase().includes(query)
+      );
+      displayProducts(filtered);
+    });
+
+    fetchProducts();
+  </script>
+</body>
+</html>
