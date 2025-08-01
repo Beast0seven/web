@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Nike Airforce1 Premium",
+    "tag": "Own the Airforce",
+    "description": "Step back into classic hoops style with a durable leather.",
+    "price": "$111",
+    "image": "https://images.pexels.com/photos/1082520/pexels-photo-1082520.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example1"
+  },
+  {
+    "title": "Smart LED TV 55\"",
+    "tag": "Ultra HD Display",
+    "description": "Enjoy your favorite shows in 4K Ultra HD with built-in apps.",
+    "price": "$499",
+    "image": "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example2"
+  },
+  {
+    "title": "Wireless Bluetooth Earbuds",
+    "tag": "Crystal Clear Audio",
+    "description": "Compact design with noise cancellation and long battery life.",
+    "price": "$59",
+    "image": "https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example3"
+  },
+  {
+    "title": "Android Smartwatch Pro",
+    "tag": "Track Your Life",
+    "description": "Fitness tracker with heart rate monitor and GPS.",
+    "price": "$129",
+    "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example4"
+  },
+  {
+    "title": "Portable Bluetooth Speaker",
+    "tag": "Party Anywhere",
+    "description": "Compact, waterproof, and loud. Perfect for travel and poolside fun.",
+    "price": "$89",
+    "image": "https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example5"
+  },
+  {
+    "title": "Gaming Laptop 16\"",
+    "tag": "Built for Speed",
+    "description": "Powerful GPU, fast SSD, and RGB keyboard for pro gamers.",
+    "price": "$1299",
+    "image": "https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example6"
+  },
+  {
+    "title": "Wireless Charging Pad",
+    "tag": "No More Cables",
+    "description": "Fast charging compatible with all Qi devices.",
+    "price": "$35",
+    "image": "https://images.pexels.com/photos/6078124/pexels-photo-6078124.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example7"
+  },
+  {
+    "title": "Smartphone Tripod",
+    "tag": "Steady Shots",
+    "description": "Adjustable stand with remote shutter and 360° rotation.",
+    "price": "$29",
+    "image": "https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example8"
+  },
+  {
+    "title": "Mechanical Gaming Keyboard",
+    "tag": "Tactile & Clicky",
+    "description": "Backlit RGB keys with anti-ghosting and custom macros.",
+    "price": "$79",
+    "image": "https://images.pexels.com/photos/4112551/pexels-photo-4112551.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example9"
+  },
+  {
+    "title": "Action Camera 4K",
+    "tag": "Adventure Ready",
+    "description": "Waterproof, 4K video, and image stabilization for sports.",
+    "price": "$149",
+    "image": "https://images.pexels.com/photos/1682696/pexels-photo-1682696.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example10"
+  },
+  {
+    "title": "Smart Home Hub",
+    "tag": "Voice Controlled",
+    "description": "Control all your smart devices from one central unit.",
+    "price": "$99",
+    "image": "https://images.pexels.com/photos/6078122/pexels-photo-6078122.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example11"
+  },
+  {
+    "title": "Drone with 1080p Camera",
+    "tag": "Fly & Record",
+    "description": "Capture aerial views with GPS stability and live view.",
+    "price": "$199",
+    "image": "https://images.pexels.com/photos/1619311/pexels-photo-1619311.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example12"
+  },
+  {
+    "title": "USB-C Fast Charger",
+    "tag": "Power Up Fast",
+    "description": "45W wall charger for laptops and smartphones.",
+    "price": "$25",
+    "image": "https://images.pexels.com/photos/1054388/pexels-photo-1054388.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example13"
+  },
+  {
+    "title": "Wireless Gaming Mouse",
+    "tag": "Precision Aim",
+    "description": "High DPI sensor with ergonomic design and RGB lighting.",
+    "price": "$49",
+    "image": "https://images.pexels.com/photos/163125/mouse-macintosh-technology-pc-163125.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example14"
+  },
+  {
+    "title": "Noise Cancelling Headphones",
+    "tag": "Silence the World",
+    "description": "Over-ear design with deep bass and active noise cancellation.",
+    "price": "$199",
+    "image": "https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example15"
+  },
+  {
+    "title": "Fitness Band Pro",
+    "tag": "Track Your Moves",
+    "description": "Monitor steps, sleep, heart rate with water resistance.",
+    "price": "$59",
+    "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example16"
+  },
+  {
+    "title": "Smart Light Bulb",
+    "tag": "Mood Lighting",
+    "description": "WiFi-controlled bulb with millions of colors and timers.",
+    "price": "$19",
+    "image": "https://images.pexels.com/photos/3656330/pexels-photo-3656330.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example17"
+  },
+  {
+    "title": "HD Web Camera",
+    "tag": "Perfect for Meetings",
+    "description": "1080p webcam with built-in microphone and auto focus.",
+    "price": "$69",
+    "image": "https://images.pexels.com/photos/430205/pexels-photo-430205.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example18"
+  },
+  {
+    "title": "Tablet Stand Adjustable",
+    "tag": "Hands-Free Comfort",
+    "description": "360-degree rotation, foldable, and universal fit.",
+    "price": "$22",
+    "image": "https://images.pexels.com/photos/5082587/pexels-photo-5082587.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example19"
+  },
+  {
+    "title": "Smartphone Gimbal Stabilizer",
+    "tag": "Cinematic Video",
+    "description": "Shoot shake-free videos with this 3-axis stabilizer.",
+    "price": "$129",
+    "image": "https://images.pexels.com/photos/40614/pexels-photo-40614.jpeg",
+    "buyLink": "https://www.amazon.com/dp/example20"
+  }
+]
